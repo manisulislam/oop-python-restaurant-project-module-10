@@ -1,4 +1,6 @@
 from Menu import Burger, Drinks, Pizza, Menu
+from restaurant import Restaurant
+from users import Chef, Customer, Manager, Server
 def main():
     menu= Menu()
     # pizza
@@ -23,5 +25,27 @@ def main():
 
     # show menu
     menu.show_menu()
+
+    # restaurant
+    restaurant= Restaurant("sai baba restaurant",2000, menu)
+
+    # add employee
+    manager= Manager("kala chan","032145","ka@gmail.com", "kala pur",2000, "jan 1 2020","core")
+
+    restaurant.add_employee("manager", manager)
+
+    chef= Chef("rostom", "526156", "ros@gmail.com","india",4000,"february 2 2020","chef","everything")
+    restaurant.add_employee("chef",chef)
+    
+    server=Server("pakhi bai", "41526","paki@gamil.com","pakistan",1450,"june 2 2020","server")
+    restaurant.add_employee("server", server)
+
+    # show employee
+    restaurant.show_employee()
+
+
+
+
+
 if __name__ == "__main__":
     main()

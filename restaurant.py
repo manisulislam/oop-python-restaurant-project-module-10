@@ -1,9 +1,10 @@
 class Restaurant:
-    def __init__(self, name, menu=[]) -> None:
+    def __init__(self, name,rent, menu=[]) -> None:
         self.name= name
         self.chef= None
         self.server= None
         self.manager= None
+        self.rent= rent
         self.menu= menu
         self.revenue= 0
         self.expense=0
@@ -35,3 +36,9 @@ class Restaurant:
         def pay_salary(self, employee):
             if employee.salary> self.balance:
                 employee.receive_salary()
+    def show_employee(self):
+        print(f"Show employeees...")
+        if self.chef is not  None:
+            print(f"chef name : {self.chef.name} with salary {self.chef.salary}")
+        if self.server is not None:
+            print(f"chef name : {self.server.name} with salary {self.server.salary}")
