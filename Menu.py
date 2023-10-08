@@ -33,7 +33,7 @@ class Menu:
     def add_menu_item(self, item_type, item):
         if item_type == "pizza":
             self.pizzas.append(item)
-        elif item_type == "drink":
+        elif item_type == "drinks":
             self.drinks.append(item)
         elif item_type == "burger":
             self.burgers.append(item)
